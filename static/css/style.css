@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page background */
+body.bg-dark {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  min-height: 100vh;
+}
+
+/* Card styling */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+/* Card header */
+.card-header {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 20px;
+}
+
+.card-header h1 {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Card body */
+.card-body {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+/* Form labels */
+.form-group label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs & dropdowns */
+.form-control {
+  border-radius: 8px;
+  height: 45px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #4ca1af;
+  box-shadow: 0 0 8px rgba(76, 161, 175, 0.5);
+}
+
+/* Predict button */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Prediction output */
+#prediction {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 25px;
+  background: #f4f6f8;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Spacing helper */
+.mt-50 {
+  margin-top: 50px;
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-header h1 {
+    font-size: 22px;
+  }
+
+  #prediction {
+    font-size: 18px;
+  }
+}
+.card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Background shadow / glow */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: -20px;
+  background: rgba(0, 0, 0, 0.25);
+  filter: blur(40px);
+  z-index: -1;
+  border-radius: 20px;
+}
+
