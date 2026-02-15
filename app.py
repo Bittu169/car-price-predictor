@@ -7,7 +7,8 @@ import numpy as np
 app = Flask(__name__)
 
 
-model = pickle.load(open("linearRegressionModel.pkl","rb"))
+model = pickle.load(open("LinearRegressionModel.pkl", "rb"))
+
 # Load car dataset
 car = pd.read_csv('Cleanned_Car.csv')
 
@@ -47,6 +48,7 @@ def predict():
     # Dummy return — replace with model prediction if needed
     return str(np.round(prediction[0],2))
 
-if __name__ == '__main__':
-    app.run(debug=True, host="127.0.0.1", port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+
 
